@@ -47,7 +47,8 @@ const translations = {
     ],
     bookWhatsApp: "Book via WhatsApp",
     callUs: "Call Us",
-    footerText: "© 2026 Daqn Plus Salon. All Rights Reserved."
+    footerText: "© 2026 Daqn Plus Salon. All Rights Reserved.",
+    sampleReviews: "Reviews shown are sample content."
   },
   ar: {
     brand: "دقن بلاس",
@@ -91,7 +92,8 @@ const translations = {
     ],
     bookWhatsApp: "احجز عبر واتساب",
     callUs: "اتصل بنا",
-    footerText: "© 2026 صالون دقن بلاس. جميع الحقوق محفوظة."
+    footerText: "© 2026 صالون دقن بلاس. جميع الحقوق محفوظة.",
+    sampleReviews: "التقييمات المعروضة هي محتوى توضيحي."
   }
 };
 
@@ -474,7 +476,7 @@ export default function App() {
       {/* Footer */}
       <footer className="py-8 border-t border-white/10 text-center bg-[#0a0a0a]">
         <p className={`text-[10px] text-white/40 uppercase tracking-widest`}>
-          {t.footerText}
+          {t.footerText} {t.sampleReviews}
         </p>
       </footer>
 
