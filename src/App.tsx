@@ -181,7 +181,12 @@ export default function App() {
             >
               {t.langToggle}
             </button>
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-white">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
+              className="text-white"
+            >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -271,10 +276,10 @@ export default function App() {
               {t.servicesTitle}
             </h2>
             <div className="hidden md:flex gap-4">
-              <button onClick={prevService} className="w-12 h-12 rounded-none border border-white/20 flex items-center justify-center hover:border-[#C7B28B] text-white hover:text-[#C7B28B] transition-colors focus:outline-none">
+              <button onClick={prevService} aria-label={isRtl ? 'الخدمة السابقة' : 'Previous service'} className="w-12 h-12 rounded-none border border-white/20 flex items-center justify-center hover:border-[#C7B28B] text-white hover:text-[#C7B28B] transition-colors focus:outline-none">
                 {isRtl ? <ChevronRight size={24} /> : <ChevronLeft size={24} />}
               </button>
-              <button onClick={nextService} className="w-12 h-12 rounded-none border border-white/20 flex items-center justify-center hover:border-[#C7B28B] text-white hover:text-[#C7B28B] transition-colors focus:outline-none">
+              <button onClick={nextService} aria-label={isRtl ? 'الخدمة التالية' : 'Next service'} className="w-12 h-12 rounded-none border border-white/20 flex items-center justify-center hover:border-[#C7B28B] text-white hover:text-[#C7B28B] transition-colors focus:outline-none">
                 {isRtl ? <ChevronLeft size={24} /> : <ChevronRight size={24} />}
               </button>
             </div>
@@ -432,7 +437,7 @@ export default function App() {
                         <Phone size={14} />
                         <span className={`text-xs uppercase tracking-widest`}>{t.callUs}</span>
                       </a>
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className={`flex-1 bg-white hover:bg-[#C7B28B] text-black rounded-none py-4 px-6 flex justify-center items-center gap-2 transition-colors`}>
+                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={`flex-1 bg-white hover:bg-[#C7B28B] text-black rounded-none py-4 px-6 flex justify-center items-center gap-2 transition-colors`}>
                         <MessageCircle size={14} />
                         <span className={`text-xs uppercase font-bold tracking-widest`}>{t.bookWhatsApp}</span>
                       </a>
@@ -458,6 +463,7 @@ export default function App() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                title={isRtl ? 'موقع الصالون على الخريطة' : 'Salon location map'}
                 className="filter contrast-125 saturate-50 brightness-75 group-hover:brightness-100 transition-all duration-700"
               ></iframe>
             </motion.div>
