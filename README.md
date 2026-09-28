@@ -1,6 +1,6 @@
 # Daqn Plus Salon
 
-Bilingual (English / Arabic) website for Daqn Plus men's grooming salon in Bisha, Saudi Arabia. Visitors book by WhatsApp or phone.
+I built this bilingual (English / Arabic) website for Daqn Plus, a men's grooming salon in Bisha, Saudi Arabia. Visitors book by WhatsApp or phone.
 
 ## Stack
 
